@@ -4,22 +4,22 @@ input[type='radio'] { display: none }
 
 /* header */
 
-.bg { position: relative; width: 100%; height: 720px; background: url(./img/1.jpg) fixed no-repeat top/cover; overflow: hidden; }
-.slide_layer{ left: 0; right: 0; top: 0; bottom: 0; position: absolute; background: rgba(0,0,0,0.2); }
-.nav { display: flex; justify-content: space-around; background: height: 79px; border-bottom: 1px solid #51697d; transition: .3s; }
-.nav:hover { background: #fff; transition: .3s; }
-.logo { background: url(./img/logo-white.png) no-repeat center/cover; width: 200px; height: 80px; }
-.nav:hover .logo { background: url(./img/logo.png) no-repeat center/cover; }
-.right { width: 750px; display: flex; align-items: center; justify-content: space-between; }
-.right > div:not(.gnb) { transition: .3s; color: #fff; text-align: center; line-height: 40px; background: #3d97eb; width: 120px; height: 40px; border-radius: 2px; }
-.nav:hover .right > div:not(.gnb):hover { transition: .3s; text-align: center; line-height: 40px; color: #3d97eb; background: #fff; border: 1px solid #ccc; width: 118px; height: 38px; border-radius: 2px; }
-.gnb { display: flex; justify-content: space-between; width: 435px; height: 30px }
-.gnb .li { color: #fff; margin-top: -5px; height: 40px; font-size: 15px; line-height: 30px; }
-.nav:hover .gnb .li { color: #000; font-size: 15px; line-height: 30px; }
-.gnb .bar { opacity: 0; transition: 0.2s; background: #2d97eb; width: 100%; height: 5px; }
-.gnb .li .bottom { transform: translateY(15px); }
-.gnb .li .top { transform: translateY(-15px); }
-.gnb .li:hover .bar { opacity: 1; transition: .3s; transform: inherit; }
+header .bg { position: relative; width: 100%; height: 720px; background: url(./img/1.jpg) fixed no-repeat top/cover; overflow: hidden; }
+header .slide_layer{ left: 0; right: 0; top: 0; bottom: 0; position: absolute; background: rgba(0,0,0,0.2); }
+header .nav { display: flex; justify-content: space-around; background: height: 79px; border-bottom: 1px solid #51697d; transition: .3s; }
+header .nav:hover { background: #fff; transition: .3s; }
+header .logo { background: url(./img/logo-white.png) no-repeat center/cover; width: 200px; height: 80px; }
+header .nav:hover .logo { background: url(./img/logo.png) no-repeat center/cover; }
+header .right { width: 750px; display: flex; align-items: center; justify-content: space-between; }
+header .right > div:not(.gnb) { transition: .3s; color: #fff; text-align: center; line-height: 40px; background: #3d97eb; width: 120px; height: 40px; border-radius: 2px; }
+header .nav:hover .right > div:not(.gnb):hover { transition: .3s; text-align: center; line-height: 40px; color: #3d97eb; background: #fff; border: 1px solid #ccc; width: 118px; height: 38px; border-radius: 2px; }
+header .gnb { display: flex; justify-content: space-between; width: 435px; height: 30px }
+header .gnb .li { color: #fff; margin-top: -5px; height: 40px; font-size: 15px; line-height: 30px; }
+header .nav:hover .gnb .li { color: #000; font-size: 15px; line-height: 30px; }
+header .gnb .bar { opacity: 0; transition: 0.2s; background: #2d97eb; width: 100%; height: 5px; }
+header .gnb .li .bottom { transform: translateY(15px); }
+header .gnb .li .top { transform: translateY(-15px); }
+header .gnb .li:hover .bar { opacity: 1; transition: .3s; transform: inherit; }
 
 /* slide */
 
@@ -61,13 +61,28 @@ input[type='radio'] { display: none }
 .intro .wrap .circle { border: 5px solid #efefef; display: flex; justify-content: center; align-items: center; border-radius: 50%; width: 165px; height: 165px; }
 
 /* package */
+.package { background: #f8f8f8; height: 870px; display: flex; flex-flow: column wrap; justify-content: space-around; align-items: center; }
 .package .title { font-size: 30px; }
-.package .title span {  }
+.package .title span { font-weight: bold; border-bottom: 10px double #3d97eb; }
 .package .title span:hover { background: linear-gradient(-60deg,#f9c200,#3d97eb);-webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.package .wrap { display: flex; }
+.package .wrap .block { overflow: hidden; width: 320px; height: 435px; border-radius: 5px; background: #fff; }
+.package .wrap .block .image { position: relative; width: 320px; height: 320px; }
+.package .wrap .block .image div { position: absolute; text-align: center; line-height: 50px; right: 20px; background: #3d97eb; color: #fff; width: 60px; height: 50px; }
+.package .wrap .block .image p { position: absolute; left: 10px; bottom: 10px; color: #fff; }
+.package .wrap .block:nth-child(1) .image { background: url(./img/9.jpg) no-repeat center/cover; }
+.package .wrap .block:nth-child(2) .image { background: url(./img/10.jpg) no-repeat center/cover; }
+.package .wrap .block:nth-child(3) .image { background: url(./img/12.jpg) no-repeat center/cover; }
+.package .wrap .block:nth-child(4) .image { background: url(./img/13.jpg) no-repeat center/cover; }
+.package .wrap .block .text { background: #fff; height: 115px; }
+.package .wrap .block .text p:first-child { margin: 0 auto; margin-top: 20px; width: 290px; font-size: 13px; border-bottom: 1px solid #ededed }
+.package .wrap .block .text .rate { color: #f9c200; }
+.package .wrap .block .text .dcprice { font-size: 15px; }
+.package .wrap .block .text .price { margin: 0 auto; font-size: 12px; text-decoration: line-through; color: #999; }
 .package .more { overflow: hidden; position: relative; line-height: 48px; width: 138px; height: 48px; display: inline-block; border: 1px solid #3d97eb; }
-.package .more .more_btn { color: #000; transition: 0.3s; position: absolute; width: 100%; height: 100%; margin: 0 auto; }
+.package .more .more_btn { text-align: center; color: #3d97eb; transition: 0.3s; position: absolute; width: 100%; height: 100%; margin: 0 auto; }
 .package .more:hover .more_btn { transition: 0.3s; color: #fff; }
-.package .text .more > div:not(.more_btn){ transition: 0.3s; position: absolute; background: #3d97eb; width: 105px; height: 105px; top: 50%; }
+.package .more > div:not(.more_btn){ transition: 0.3s; position: absolute; background: #3d97eb; width: 105px; height: 105px; top: 50%; }
 .package .more .left { left:0; transform-origin: top left; transform: rotate(-60deg) translateX(-60px) translateY(-115%); }
 .package .more .right { right:0; transform-origin: top right; transform: rotate(-60deg) translateX(60px) translateY(15%); }
 .package .more:hover .left { transition: 0.3s; transform: rotate(-60deg) translateX(-35px) translateY(-42.5%); }
