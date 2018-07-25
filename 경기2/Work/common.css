@@ -66,16 +66,16 @@ header .gnb .li:hover .bar { opacity: 1; transition: .3s; transform: inherit; }
 .intro .bgblock .background { position: absolute; transition: opacity .5s; }
 .intro .fake_block:hover ~ .bgblock .background { transition: opacity .5s; }
 .intro .fake_block:nth-child(1) { left: 17.75%; }
-.intro .fake_block:nth-child(1) ~ .bgblock .background:nth-child(1) { opacity: 0; background: url(../img/8.jpg) no-repeat center/cover; }
+.intro .fake_block:nth-child(1) ~ .bgblock .background:nth-child(1) { opacity: 0; background: url(img/8.jpg) no-repeat center/cover; }
 .intro .fake_block:nth-child(1):hover ~ .bgblock .background:nth-child(1) { opacity: 1; }
 .intro .fake_block:nth-child(2) { left: 36.25%; }
-.intro .fake_block:nth-child(2) ~ .bgblock .background:nth-child(2) { opacity: 0; background: url(../img/2.jpg) no-repeat center/cover; }
+.intro .fake_block:nth-child(2) ~ .bgblock .background:nth-child(2) { opacity: 0; background: url(img/2.jpg) no-repeat center/cover; }
 .intro .fake_block:nth-child(2):hover ~ .bgblock .background:nth-child(2) { opacity: 1; }
 .intro .fake_block:nth-child(3) { right: 36.25%; }
-.intro .fake_block:nth-child(3) ~ .bgblock .background:nth-child(3) { opacity: 0; background: url(../img/4.jpg) no-repeat center/cover; }
+.intro .fake_block:nth-child(3) ~ .bgblock .background:nth-child(3) { opacity: 0; background: url(img/4.jpg) no-repeat center/cover; }
 .intro .fake_block:nth-child(3):hover ~ .bgblock .background:nth-child(3) { opacity: 1; }
 .intro .fake_block:nth-child(4) { right: 17.75%; }
-.intro .fake_block:nth-child(4) ~ .bgblock .background:nth-child(4) { opacity: 0; background: url(../img/5.jpg) no-repeat center/cover; }
+.intro .fake_block:nth-child(4) ~ .bgblock .background:nth-child(4) { opacity: 0; background: url(img/5.jpg) no-repeat center/cover; }
 .intro .fake_block:nth-child(4):hover ~ .bgblock .background:nth-child(4) { opacity: 1; }
 .intro .wrap .block { width: calc(24% - 1px); height: 300px; display: flex; flex-flow: wrap column; align-items: center; justify-content: space-around; text-align: center; }
 .intro .wrap .block .text { display: flex; flex-flow: column wrap; height: 90px; align-items: center; justify-content: space-around; }
@@ -145,7 +145,7 @@ header .gnb .li:hover .bar { opacity: 1; transition: .3s; transform: inherit; }
 .purchase .content .btn { width: 125px; height: 40px; line-height: 40px; text-align: center; }
 .purchase .content .p_pch { background: #3d97eb; color: #fff; }
 .purchase .content .p_chk { background: #fff; color: #3d97eb;; }
-.purchase .bg {position: relative; height: 345px; background: url(../img/6.jpg) fixed no-repeat center top/cover; }
+.purchase .bg {position: relative; height: 345px; background: url(./img/6.jpg) fixed no-repeat center top/cover; }
 .purchase .bg:hover .layer_animation1 { transition: 0.2s ease; left:0; }
 .purchase .bg:hover .layer_animation2 { transition: 0.2s ease; right:0; }
 .purchase .bg .layer { position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: linear-gradient(to right,#3d97eb ,#f9c200); opacity: 0.3 }

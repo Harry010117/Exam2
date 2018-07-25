@@ -1,0 +1,424 @@
+/* font setting */
+@font-face {
+	font-family: NanumSquareWeb;
+	src: url(../font/NanumSquareL.woff) format('woff');
+	font-weight: 300;
+}
+@font-face {
+	font-family: NanumSquareWeb;
+	src: url(../font/NanumSquareR.woff) format('woff');
+	font-weight: 400;
+}
+@font-face {
+	font-family: NanumSquareWeb;
+	src: url(../font/NanumSquareB.woff) format('woff');
+	font-weight: 700;
+}
+@font-face {
+	font-family: NanumSquareWeb;
+	src: url(../font/NanumSquareEB.woff) format('woff');
+	font-weight: 800;
+}
+
+/* global setting */
+
+* { margin: 0; padding: 0; scroll-behavior: smooth; }
+body { font-family: NanumSquareWeb; font-weight: 300; }
+input[type='checkbox'],
+input[type='radio'] { display: none; }
+ul,li { list-style: none; }
+label { display: block }
+a { text-decoration: none; color: #000; }
+.title p:nth-child(1) { font-weight: 400; color: #33d2e5; font-size: 20px; }
+.title p:nth-child(2) { font-weight: 700; color: #222; font-size: 40px; }
+.title p.white { color: #fff; }
+
+/* header */
+header { overflow: hidden; position: relative; width: 100%; height: 1015px; background: url(../images/main.jpg)no-repeat center/cover; }
+header .nav { position: relative; border-bottom: 2px solid #fff; margin: 0 auto; width: calc(100% - 100px); height: 78px; display: flex; justify-content: space-between; align-items: center; }
+header .logo { width: 115px; height: 50px; font-size: 30px; font-weight: 300; color: #fff; line-height: 25px; }
+header .logo span { color: #00adef; }
+header .menu { position: absolute; right: 0; width: 30px; height: 25px; display: flex; flex-flow: column wrap; justify-content: space-between; }
+header .menu .bar { transition: .5s; position: static; z-index: 110; background: #fff; width: 30px; height: 3px; }
+header .opening_menu { z-index: 100; position: absolute; right: 0; background: #00a0f3; width: 428px; height: 428px; transform: translateY(-214px) translateX(520px) rotateZ(-45deg); transition: .5s; } 
+header .opening_menu div { transition: .3s; position: absolute; top: 50%; color: #fff; transform: translateX(50%) rotateZ(45deg); } 
+header .opening_menu div:hover { transition: .3s; color: #666; } 
+header .opening_menu .menu1 { position: absolute; top: 35%; } 
+header .opening_menu .menu2 { position: absolute; top: 45%; } 
+header .opening_menu .menu3 { position: absolute; top: 55%; }  
+header #menuopen:checked ~ .opening_menu { transition: .5s; transform: translateY(-214px) translateX(214px) rotateZ(-45deg); }
+header #menuopen:checked ~ .nav .bar { background: #000; display: none; }
+header #menuopen:checked ~ .nav .bar.close { transition: .5s; position: absolute; top: 50%; transform: translateY(-50%); display: block; background: #000; }
+header #menuopen:checked ~ .nav .bar.close.top { transform: rotateZ(45deg); }
+header #menuopen:checked ~ .nav .bar.close.bottom { transform: rotateZ(-45deg); }
+header .fake_block { width: 30px; height: 25px; }
+header .gnb a { font-weight: 300; color: #fff; }
+header .gnb { display: flex; justify-content: space-between; width: 280px; height: 20px; }
+
+/* main */
+
+.main { font-weight: 300; color: #fff; font-size: 50px; height: 935px; display: flex; justify-content: center; align-items: center; }
+.main .text { display: flex; flex-flow: column wrap; justify-content: center; align-items: center; }
+.main .text p:last-child { color: #00adef; letter-spacing: 7.5px; margin-top: 10px; }
+.main .text .typing { position: relative; letter-spacing: 3px; height: 50px; line-height: 50px; display: flex; }
+.main .text .typing:before { content: ""; animation: typing 20s infinite; }
+.main .text .typing:after { content: ""; position: absolute; right: 10px; bottom: 0; width: 40px; height: 2px; background: #fff;  }
+.main .text .cursor { display: block; animation: cursor 2s infinite; width: 2px; height: 50px; background: #fff; }
+
+/* slide */
+#slide { overflow: hidden; height: 940px; width: 100%; display: flex; flex-flow: column wrap; justify-content: space-around; align-items: center; }
+#slide > .text { height: 85px; display: flex; flex-flow: column wrap; justify-content: space-between; align-items: center; }
+#slide > .text p:nth-of-type(1) { font-size: 25px; font-weight: 400; }
+#slide > .text p:nth-of-type(2) { font-size: 20px; font-weight: 400; }
+.slide { background: #bff; }
+.slide .slide_box { transition: .3s; transform: translateX(4%); display: flex; width: 1000%; }
+.slide label { overflow: hidden; transition: .3s; width: 2%; height: 600px; display: flex; align-items: flex-end; }
+.slide label .text { transition: .3s; transform: translateY(60%); width: 100%; height: 27.5%; display: flex; justify-content: center; align-items: center; background: rgba(0,0,0,0.8); color: #fff; }
+.slide label .text div { display: flex; flex-flow: column wrap; justify-content: space-between; width: 90%; height: 75%;}
+.slide label .text div p:nth-child(1) { font-size: 25px; }
+.slide label .text div p:nth-child(2) { font-size: 18px; }
+.slide label .text div p:nth-child(3) { font-size: 13px; }
+
+.slide label:nth-child(1) { background: url(../images/slide_1.jpg)no-repeat center/cover; }
+.slide label:nth-child(2) { background: url(../images/slide_2.jpg)no-repeat center/cover; }
+.slide label:nth-child(3) { background: url(../images/slide_3.jpg)no-repeat center/cover; }
+.slide label:nth-child(4) { background: url(../images/slide_4.jpg)no-repeat center/cover; }
+.slide label:nth-child(5) { background: url(../images/slide_5.jpg)no-repeat center/cover; }
+.slide label:nth-child(6) { background: url(../images/slide_6.jpg)no-repeat center/cover; }
+.slide label:nth-child(7) { background: url(../images/slide_7.jpg)no-repeat center/cover; }
+.slide label:nth-child(8) { background: url(../images/slide_8.jpg)no-repeat center/cover; }
+.slide label:nth-child(9) { background: url(../images/slide_9.jpg)no-repeat center/cover; }
+.slide label:nth-child(10) { background: url(../images/slide_10.jpg)no-repeat center/cover; }
+
+.slide label:hover { transform: scale(1.05); }
+.slide label:hover { transform: scale(1.05); }
+.slide label:hover { transform: scale(1.05); }
+.slide label:hover { transform: scale(1.05); }
+.slide label:hover { transform: scale(1.05); }
+.slide label:hover { transform: scale(1.05); }
+.slide label:hover { transform: scale(1.05); }
+.slide label:hover { transform: scale(1.05); }
+.slide label:hover { transform: scale(1.05); }
+.slide label:hover { transform: scale(1.05); }
+
+#slide #spos1:checked ~ .slide .slide_box { margin-left: 0%; }
+#slide #spos2:checked ~ .slide .slide_box { margin-left: -20%; }
+#slide #spos3:checked ~ .slide .slide_box { margin-left: -40%; }
+#slide #spos4:checked ~ .slide .slide_box { margin-left: -60%; }
+#slide #spos5:checked ~ .slide .slide_box { margin-left: -80%; }
+#slide #spos6:checked ~ .slide .slide_box { margin-left: -100%; }
+#slide #spos7:checked ~ .slide .slide_box { margin-left: -120%; }
+#slide #spos8:checked ~ .slide .slide_box { margin-left: -140%; }
+#slide #spos9:checked ~ .slide .slide_box { margin-left: -160%; }
+#slide #spos10:checked ~ .slide .slide_box { margin-left: -180%; }
+
+#slide #spos1:checked ~ .slide label:nth-child(1) { z-index: 100; transform: scale(1.1); }
+#slide #spos2:checked ~ .slide label:nth-child(2) { z-index: 100; transform: scale(1.1); }
+#slide #spos3:checked ~ .slide label:nth-child(3) { z-index: 100; transform: scale(1.1); }
+#slide #spos4:checked ~ .slide label:nth-child(4) { z-index: 100; transform: scale(1.1); }
+#slide #spos5:checked ~ .slide label:nth-child(5) { z-index: 100; transform: scale(1.1); }
+#slide #spos6:checked ~ .slide label:nth-child(6) { z-index: 100; transform: scale(1.1); }
+#slide #spos7:checked ~ .slide label:nth-child(7) { z-index: 100; transform: scale(1.1); }
+#slide #spos8:checked ~ .slide label:nth-child(8) { z-index: 100; transform: scale(1.1); }
+#slide #spos9:checked ~ .slide label:nth-child(9) { z-index: 100; transform: scale(1.1); }
+#slide #spos10:checked ~ .slide label:nth-child(10) { z-index: 100; transform: scale(1.1); }
+
+#slide #spos1:checked ~ .slide label:nth-child(1) .text { transform: translateY(0%); }
+#slide #spos2:checked ~ .slide label:nth-child(2) .text { transform: translateY(0%); }
+#slide #spos3:checked ~ .slide label:nth-child(3) .text { transform: translateY(0%); }
+#slide #spos4:checked ~ .slide label:nth-child(4) .text { transform: translateY(0%); }
+#slide #spos5:checked ~ .slide label:nth-child(5) .text { transform: translateY(0%); }
+#slide #spos6:checked ~ .slide label:nth-child(6) .text { transform: translateY(0%); }
+#slide #spos7:checked ~ .slide label:nth-child(7) .text { transform: translateY(0%); }
+#slide #spos8:checked ~ .slide label:nth-child(8) .text { transform: translateY(0%); }
+#slide #spos9:checked ~ .slide label:nth-child(9) .text { transform: translateY(0%); }
+#slide #spos10:checked ~ .slide label:nth-child(10) .text { transform: translateY(0%); }
+
+/* image */
+#image { margin: 0 auto; width: 1435px; height: 1365px; display: flex; flex-flow: column wrap; justify-content: space-around; }
+#image .img_box { width: 1435px; height: 990px; display: flex; flex-wrap: wrap; justify-content: space-between; align-content: space-between; }
+#image .img_box .img .layer { transition: opacity 0.3s; opacity: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; }
+#image .img_box .img .layer:hover { transition: opacity 0.3s; opacity: 1; }
+#image .img_box .img .layer .more { transition: .3s; width: 100px; height: 40px; border: 2px solid #fff; font-size: 20px; text-align: center; line-height: 40px; color: #fff; }
+#image .img_box .img .layer .more:hover { transition: .3s; background: #fff; color: #000; }
+#image .img_box .top { display: flex; justify-content: space-between; align-content: space-between; width: 1435px; height: 490px; }
+#image .img_box .top .left { display: flex; flex-wrap: wrap; justify-content: space-between; align-content: space-between; width: 1000px; height: 490px; }
+#image .img_box .top .left .img:nth-child(1) { width: 280px; height: 290px; background: url(../images/gallery_1.jpg)no-repeat center/cover; }
+#image .img_box .top .left .img:nth-child(2) { width: 350px; height: 290px; background: url(../images/gallery_2.jpg)no-repeat center/cover; }
+#image .img_box .top .left .img:nth-child(3) { width: 350px; height: 290px; background: url(../images/gallery_3.jpg)no-repeat center/cover; }
+#image .img_box .top .left .img:nth-child(4) { width: 280px; height: 190px; background: url(../images/gallery_5.jpg)no-repeat center/cover; }
+#image .img_box .top .left .img:nth-child(5) { width: 710px; height: 190px; background: url(../images/gallery_6.jpg)no-repeat center/cover; }
+#image .img_box .top .img { width: 425px; height: 490px; background: url(../images/gallery_4.jpg)no-repeat center/cover; }
+#image .img_box .bottom { display: flex; justify-content: space-between; width: 1435px; height: 490px; }
+#image .img_box .bottom .img { width: 640px; height: 490px; background: url(../images/gallery_7.jpg)no-repeat center/cover; }
+#image .img_box .bottom .right { width: 785px; height: 490px; display: flex; flex-wrap: wrap; align-content: space-between; justify-content: space-between; }
+#image .img_box .bottom .right .img:nth-child(1) { width: 785px; height: 240px; background: url(../images/gallery_8.jpg)no-repeat center/cover; }
+#image .img_box .bottom .right .img:nth-child(2) { width: 785px; height: 240px; background: url(../images/gallery_9.jpg)no-repeat center/cover; }
+
+/* bus_course */
+#bus_course { position: relative; width: 100%; height: 900px; background: url(../images/background.jpg) fixed no-repeat center/cover; }
+#bus_course:before { position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: block; content: ""; background: rgba(0,0,80,0.5); }
+#bus_course .wrap { left: 50%; transform: translateX(-50%); position: absolute; z-index: 100; width: 1435px; margin: 0 auto; height: 100%; display: flex; flex-flow: column wrap; justify-content: space-around; align-items: center; }
+#bus_course .wrap .title { align-self: flex-start; }
+#bus_course .wrap .box { display: flex; width: 1435px; justify-content: space-between; flex-flow: row wrap; }
+#bus_course .wrap .course_list { width: 690px; height: 550px; overflow-y: scroll; }
+#bus_course label { position: relative; color: #fff; font-size: 30px; z-index: 110; text-align: center; line-height: 150px; margin: 20px auto; width: 660px; height: 150px; background: rgba(0,0,0,0.5); border-radius: 10px; }
+#bus_course .border { transition: .5s; position: absolute; left: -5px; top: -5px; z-index: 150; width: 660px; height: 150px; border-radius: 10px; border: 5px solid #fff; }
+#bus_course #cpos1:checked ~ .course_list .border { transform: translateY(0px); }
+#bus_course #cpos2:checked ~ .course_list .border { transform: translateY(170px); }
+#bus_course #cpos3:checked ~ .course_list .border { transform: translateY(340px); }
+#bus_course #cpos4:checked ~ .course_list .border { transform: translateY(510px); }
+#bus_course #cpos5:checked ~ .course_list .border { transform: translateY(680px); }
+#bus_course #cpos6:checked ~ .course_list .border { transform: translateY(850px); }
+#bus_course .course_list::-webkit-scrollbar { width: 10px; }
+#bus_course .course_list::-webkit-scrollbar-track { background: transparent; }
+#bus_course .course_list::-webkit-scrollbar-thumb { background: #888; border-radius: 5px; }
+#bus_course .course_list::-webkit-scrollbar-thumb:hover { background: #555; }
+#bus_course .course_detail { width: 665px; height: 550px; border-radius: 7.5px; overflow: hidden; }
+#bus_course .course_detail .course_name { font-size: 30px; background: #1e90ff; line-height: 100px; padding-left: 7.5%; color: #fff; width: calc(665px - 7.5%); height: 100px; }
+#bus_course .course_detail .course_info { display: flex; justify-content: center; align-items: center; font-size: 25px; word-spacing: 5px; background: #effafb; width: 665px; height: 450px; }
+#bus_course .course_detail .course_info .time_cost { font-size: 15px; word-spacing: initial; }
+#bus_course .course_detail .course_info .content { width: 85%; height: 80%; display: flex; flex-flow: column wrap; justify-content: space-between; }
+#bus_course .course_detail .course_info .c { margin-left: 20px; }
+#bus_course #cpos1:checked ~ .course_detail .course_name:before { content: "제 1 코스"; }
+#bus_course #cpos1:checked ~ .course_detail .course_info .route:before { content: "엑스포역 - 오동도 - 진남관 - 해양수산과학관 - 향일암 - 여수수산시장 - 엑스포역";  }
+#bus_course #cpos1:checked ~ .course_detail .course_info .time:before { content: "7시간 20분";  }
+#bus_course #cpos1:checked ~ .course_detail .course_info .cost:before { content: "9,000원";  }
+#bus_course #cpos2:checked ~ .course_detail .course_name:before { content: "제 2 코스"; }
+#bus_course #cpos2:checked ~ .course_detail .course_info .route:before { content: "엑스포역 - 향일암 - 이순신광장 - 흥국사 - 이순신대교 홍보관 - 서시장(승,하차) - 여수특화물수산시장(정차) - 엑스포역";  }
+#bus_course #cpos2:checked ~ .course_detail .course_info .time:before { content: "7시간 20분";  }
+#bus_course #cpos2:checked ~ .course_detail .course_info .cost:before { content: "9,000원"; }
+#bus_course #cpos3:checked ~ .course_detail .course_name:before { content: "토요유적코스"; }
+#bus_course #cpos3:checked ~ .course_detail .course_info .route:before { content: "엑스포역 - 충민사 - 진남관 - 고소대 - 이순신광장 - 전라좌수영거북선 - 선소 - 손양원목사유적공원 - 흥국사 - 수산시장 -엑스포역"; }
+#bus_course #cpos3:checked ~ .course_detail .course_info .time:before { content: "7시간 20분";  } 
+#bus_course #cpos3:checked ~ .course_detail .course_info .cost:before { content: "9,000원";  }
+#bus_course #cpos4:checked ~ .course_detail .course_name:before { content: "야경코스"; }
+#bus_course #cpos4:checked ~ .course_detail .course_info .route:before { content: "엑스포역 - 여수국가산업단지 - 돌산공원 - 돌산갓김치거리 - 이순신광장 - 오동도 야간분수 - 엑스포역"; }
+#bus_course #cpos4:checked ~ .course_detail .course_info .time:before { content: "2시간 30분";  } 
+#bus_course #cpos4:checked ~ .course_detail .course_info .cost:before { content: "9,000원"; }
+#bus_course #cpos5:checked ~ .course_detail .course_name:before { content: "주간코스"; }
+#bus_course #cpos5:checked ~ .course_detail .course_info .route:before { content: "엑스포역 - 아쿠아플라넷 - 케이블카 주차타워 - 오동도 - 엠블호텔 - 하멜전시관 - 이순신광장 - 여객선터미널 - 돌산공원입구 - 엑스포역"; }
+#bus_course #cpos5:checked ~ .course_detail .course_info .time:before { content: "각 승강장별 승, 하차 가능"; }
+#bus_course #cpos5:checked ~ .course_detail .course_info .cost:before { content: "5000원"; }
+#bus_course #cpos6:checked ~ .course_detail .course_name:before { content: "야간코스"; }
+#bus_course #cpos6:checked ~ .course_detail .course_info .route:before { content: "엑스포역 - 돌산공원입구 - 국동어항단지(게장백반거리) - 예울마루 - 선소 - 서호요트마리나 - 여수시청 - 여문문화의거리 - 교동시장(포차거리) - 이순신광장 - 엑스포역"; }
+#bus_course #cpos6:checked ~ .course_detail .course_info .time:before { content: "각 승강장별 승, 하차 가능"; }
+#bus_course #cpos6:checked ~ .course_detail .course_info .cost:before { content: "10000원"; }
+
+/* footer */
+footer { display: flex; height: 300px; }
+footer .left { display: flex; justify-content: center; align-items: center; font-size: 30px; background: #f2f4f8; width: 50%; }
+footer .left input { font-family: NanumSquareWeb; background: #f2f4f8; width: 540px; height: 40px; font-size: 20px; font-weight: 300; outline: none; border: none; border-bottom: 1px solid #444; }
+footer .left .input { position: relative; width: 100%; }
+footer .left .bar { position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; z-index: 10; transition: .5s; width: 0%; height: 3px; background: #92c7e6; }
+footer .left .email:focus + .bar { width: 100%; }
+footer .left .title:focus + .bar { width: 100%; }
+footer .left .content:focus + .bar { width: 100%;  }
+footer .right { color: #fff; background: #3d3d3d; width: 50%; display: flex; justify-content: center; align-items: center; }
+footer .right div { width: 375px; height: 60px; text-align: center; }
+footer .right .icons { margin: 0 auto; margin-bottom: 10px; display: flex; width: 90px; height: 30px; justify-content: space-around; align-items: center; }
+footer .right .icons .icon:nth-child(1) { background: url(../images/icons/icon_facebook.png) no-repeat center/cover; width: 27px; height: 26px; }
+footer .right .icons .icon:nth-child(2) { background: url(../images/icons/icon_instagram.png) no-repeat center/cover; width: 27px; height: 26px; }
+footer .right .icons .icon:nth-child(3) { background: url(../images/icons/icon_twitter.png) no-repeat center/cover; width: 27px; height: 26px; }
+
+/* keyframe animations */
+
+@keyframes typing {
+	0%		{content: "ㅇ";}
+	0.53%	{content: "아";}
+	1.06%	{content: "알";}
+	1.6%	{content: "아르";}
+	2.13%	{content: "아름";}
+	2.66%	{content: "아름ㄷ";}
+	3.19%	{content: "아름다";}
+	3.72%	{content: "아름당";}
+	4.26%	{content: "아름다우";}
+	4.79%	{content: "아름다운";}
+	5.32%	{content: "아름다운 ";}
+	5.85%	{content: "아름다운 ㅂ";}
+	6.38%	{content: "아름다운 받";}
+	6.91%	{content: "아름다운 바다";}
+	7.45%	{content: "아름다운 바다 ";}
+	7.98%	{content: "아름다운 바다 ㅅ";}
+	8.51%	{content: "아름다운 바다 수";}
+	9.04%	{content: "아름다운 바다 숨";}
+	9.57%	{content: "아름다운 바다 숨 ";}
+	10.11%	{content: "아름다운 바다 숨 ㅅ";}
+	10.64%	{content: "아름다운 바다 숨 수";}
+	11.17%	{content: "아름다운 바다 숨 쉬";}
+	11.7%	{content: "아름다운 바다 숨 쉰";}
+	12.23%	{content: "아름다운 바다 숨 쉬느";}
+	12.77%	{content: "아름다운 바다 숨 쉬는";}
+	13.3%	{content: "아름다운 바다 숨 쉬는 ";}
+	13.83%	{content: "아름다운 바다 숨 쉬는 ㅇ";}
+	14.36%	{content: "아름다운 바다 숨 쉬는 여";}
+	14.89%	{content: "아름다운 바다 숨 쉬는 연";}
+	15.43%	{content: "아름다운 바다 숨 쉬는 연ㅇ";}
+	15.96%	{content: "아름다운 바다 숨 쉬는 연아";}
+	16.49%	{content: "아름다운 바다 숨 쉬는 연안";}
+	17.02%	{content: "아름다운 바다 숨 쉬는 연안 ";}
+	17.55%	{content: "아름다운 바다 숨 쉬는 연안 ㅇ";}
+	18.08%	{content: "아름다운 바다 숨 쉬는 연안 여";}
+	18.62%	{content: "아름다운 바다 숨 쉬는 연안 엿";}
+	19.15%	{content: "아름다운 바다 숨 쉬는 연안 여수";}
+	19.68%	{content: "아름다운 바다 숨 쉬는 연안 여수";}
+	20.21%	{content: "아름다운 바다 숨 쉬는 연안 여수";}
+	20.74%	{content: "아름다운 바다 숨 쉬는 연안 여ㅅ";}
+	21.28%	{content: "아름다운 바다 숨 쉬는 연안 여";}
+	21.81%	{content: "아름다운 바다 숨 쉬는 연안 ";}
+	22.34%	{content: "아름다운 바다 숨 쉬는 연안";}
+	22.87%	{content: "아름다운 바다 숨 쉬는 연";}
+	23.4%	{content: "아름다운 바다 숨 쉬는 ";}
+	23.94%	{content: "아름다운 바다 숨 쉬는";}
+	24.47%	{content: "아름다운 바다 숨 쉬";}
+	25%		{content: "아름다운 바다 숨 ";}
+	25.53%	{content: "아름다운 바다 숨";}
+	26.06%	{content: "아름다운 바다 ";}
+	26.6%	{content: "아름다운 바";}
+	27.13%	{content: "아름다운 ";}
+	27.66%	{content: "아름다운";}
+	28.19%	{content: "아름다";}
+	28.72%	{content: "아름";}
+	29.25%	{content: "아";}
+	29.79%	{content: "ㅅ";}
+	30.32%	{content: "새";}
+	30.85%	{content: "생";}
+	31.38%	{content: "생ㅁ";}
+	31.91%	{content: "생며";}
+	32.45%	{content: "생명";}
+	32.98%	{content: "생명ㅇ";}
+	33.51%	{content: "생명으";}
+	34.04%	{content: "생명의";}
+	34.57%	{content: "생명의 ";}
+	35.11%	{content: "생명의 ㅍ";}
+	35.64%	{content: "생명의 푸";}
+	36.17%	{content: "생명의 풀";}
+	36.7%	{content: "생명의 푸르";}
+	37.23%	{content: "생명의 푸를";}
+	37.76%	{content: "생명의 푸르르";}
+	38.3%	{content: "생명의 푸르름";}
+	38.83%	{content: "생명의 푸르름 ";}
+	39.36%	{content: "생명의 푸르름 ㄱ";}
+	39.89%	{content: "생명의 푸르름 가";}
+	40.42%	{content: "생명의 푸르름 갇";}
+	40.96%	{content: "생명의 푸르름 가드";}
+	41.49%	{content: "생명의 푸르름 가득";}
+	42.02%	{content: "생명의 푸르름 가득ㅎ";}
+	42.55%	{content: "생명의 푸르름 가득하";}
+	43.08%	{content: "생명의 푸르름 가득한";}
+	43.62%	{content: "생명의 푸르름 가득한 ";}
+	44.15%	{content: "생명의 푸르름 가득한 ㅇ";}
+	44.68%	{content: "생명의 푸르름 가득한 여";}
+	45.21%	{content: "생명의 푸르름 가득한 엿";}
+	45.74%	{content: "생명의 푸르름 가득한 여수";}
+	46.28%	{content: "생명의 푸르름 가득한 여수";}
+	46.81%	{content: "생명의 푸르름 가득한 여수";}
+	47.34%	{content: "생명의 푸르름 가득한 여ㅅ";}
+	47.87%	{content: "생명의 푸르름 가득한 여";}
+	48.4%	{content: "생명의 푸르름 가득한 ";}
+	48.93%	{content: "생명의 푸르름 가득한";}
+	49.47%	{content: "생명의 푸르름 가득";}
+	50%		{content: "생명의 푸르름 가";}
+	50.53%	{content: "생명의 푸르름 ";}
+	51.06%	{content: "생명의 푸르름";}
+	51.59%	{content: "생명의 푸르";}
+	52.13%	{content: "생명의 푸";}
+	52.66%	{content: "생명의 ";}
+	53.19%	{content: "생명의";}
+	53.72%	{content: "생명";}
+	54.25%	{content: "생";}
+	54.79%	{content: "ㅇ";}
+	55.32%	{content: "이";}
+	55.85%	{content: "일";}
+	56.38%	{content: "일ㅅ";}
+	56.91%	{content: "일사";}
+	57.45%	{content: "일상";}
+	57.98%	{content: "일상ㅇ";}
+	58.51%	{content: "일상에";}
+	59.04%	{content: "일상엣";}
+	59.57%	{content: "일상에서";}
+	60.1%	{content: "일상에서 ";}
+	60.64%	{content: "일상에서 ㅅ";}
+	61.17%	{content: "일상에서 수";}
+	61.7%	{content: "일상에서 쉬";}
+	62.23%	{content: "일상에서 쉼";}
+	62.76%	{content: "일상에서 쉼ㅍ";}
+	63.3%	{content: "일상에서 쉼표";}
+	63.83%	{content: "일상에서 쉼표 ";}
+	64.36%	{content: "일상에서 쉼표 ㅎ";}
+	64.89%	{content: "일상에서 쉼표 하";}
+	65.42%	{content: "일상에서 쉼표 한";}
+	65.96%	{content: "일상에서 쉼표 하나";}
+	66.49%	{content: "일상에서 쉼표 하나 ";}
+	67.02%	{content: "일상에서 쉼표 하나 ㅇ";}
+	67.55%	{content: "일상에서 쉼표 하나 여";}
+	68.08%	{content: "일상에서 쉼표 하나 엿";}
+	68.62%	{content: "일상에서 쉼표 하나 여수";}
+	69.15%	{content: "일상에서 쉼표 하나 여수";}
+	69.68%	{content: "일상에서 쉼표 하나 여수";}
+	70.21%	{content: "일상에서 쉼표 하나 여ㅅ";}
+	70.74%	{content: "일상에서 쉼표 하나 여";}
+	71.27%	{content: "일상에서 쉼표 하나 ";}
+	71.81%	{content: "일상에서 쉼표 하나";}
+	72.34%	{content: "일상에서 쉼표 하";}
+	72.87%	{content: "일상에서 쉼표 ";}
+	73.4%	{content: "일상에서 쉼표";}
+	73.93%	{content: "일상에서 쉼";}
+	74.47%	{content: "일상에서 ";}
+	75%		{content: "일상에서";}
+	75.53%	{content: "일상에";}
+	76.06%	{content: "일상";}
+	76.59%	{content: "일";}
+	77.13%	{content: "ㅎ";}
+	77.66%	{content: "호";}
+	78.19%	{content: "화";}
+	78.72%	{content: "활";}
+	79.25%	{content: "활ㄹ";}
+	79.79%	{content: "활려";}
+	80.32%	{content: "활력";}
+	80.85%	{content: "활력 ";}
+	81.38%	{content: "활력 ㅇ";}
+	81.91%	{content: "활력 이";}
+	82.44%	{content: "활력 있";}
+	82.98%	{content: "활력 있ㄱ";}
+	83.51%	{content: "활력 있고";}
+	84.04%	{content: "활력 있고 ㅇ";}
+	84.57%	{content: "활력 있고 아";}
+	85.1%	{content: "활력 있고 알";}
+	85.64%	{content: "활력 있고 아르";}
+	86.17%	{content: "활력 있고 아름";}
+	86.7%	{content: "활력 있고 아름ㄷ";}
+	87.23%	{content: "활력 있고 아름다";}
+	87.76%	{content: "활력 있고 아름당";}
+	88.3%	{content: "활력 있고 아름다우";}
+	88.83%	{content: "활력 있고 아름다우";}
+	89.36%	{content: "활력 있고 아름다운 ";}
+	89.89%	{content: "활력 있고 아름다운 ㅇ";}
+	90.42%	{content: "활력 있고 아름다운 여";}
+	90.95%	{content: "활력 있고 아름다운 엿";}
+	91.49%	{content: "활력 있고 아름다운 여수";}
+	92.02%	{content: "활력 있고 아름다운 여수";}
+	92.55%	{content: "활력 있고 아름다운 여수";}
+	93.08%	{content: "활력 있고 아름다운 여ㅅ";}
+	93.61%	{content: "활력 있고 아름다운 여";}
+	94.15%	{content: "활력 있고 아름다운 ";}
+	94.68%	{content: "활력 있고 아름다운";}
+	95.21%	{content: "활력 있고 아름다";}
+	95.74%	{content: "활력 있고 아름";}
+	96.27%	{content: "활력 있고 아";}
+	96.81%	{content: "활력 있고 ";}
+	97.34%	{content: "활력 있고";}
+	97.87%	{content: "활력 있";}
+	98.4%	{content: "활력 ";}
+	98.93%	{content: "활력";}
+	99.47%	{content: "활";}
+	100%	{content: "";}
+}
+
+@keyframes cursor {
+	0% { opacity: 1 }
+	49.33% { opacity: 1 }
+	49.66% { opacity: 0 }
+	99.66% { opacity: 0 }
+	100% { opacity: 1; }
+}
