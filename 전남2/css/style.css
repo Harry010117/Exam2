@@ -199,11 +199,11 @@ header .gnb { display: flex; justify-content: space-between; width: 280px; heigh
 #bus_course #cpos5:checked ~ .course_detail .course_name:before { content: "주간코스"; }
 #bus_course #cpos5:checked ~ .course_detail .course_info .route:before { content: "엑스포역 - 아쿠아플라넷 - 케이블카 주차타워 - 오동도 - 엠블호텔 - 하멜전시관 - 이순신광장 - 여객선터미널 - 돌산공원입구 - 엑스포역"; }
 #bus_course #cpos5:checked ~ .course_detail .course_info .time:before { content: "각 승강장별 승, 하차 가능"; }
-#bus_course #cpos5:checked ~ .course_detail .course_info .cost:before { content: "5000원"; }
+#bus_course #cpos5:checked ~ .course_detail .course_info .cost:before { content: "5,000원"; }
 #bus_course #cpos6:checked ~ .course_detail .course_name:before { content: "야간코스"; }
 #bus_course #cpos6:checked ~ .course_detail .course_info .route:before { content: "엑스포역 - 돌산공원입구 - 국동어항단지(게장백반거리) - 예울마루 - 선소 - 서호요트마리나 - 여수시청 - 여문문화의거리 - 교동시장(포차거리) - 이순신광장 - 엑스포역"; }
 #bus_course #cpos6:checked ~ .course_detail .course_info .time:before { content: "각 승강장별 승, 하차 가능"; }
-#bus_course #cpos6:checked ~ .course_detail .course_info .cost:before { content: "10000원"; }
+#bus_course #cpos6:checked ~ .course_detail .course_info .cost:before { content: "10,000원"; }
 
 /* footer */
 footer { display: flex; height: 300px; }
