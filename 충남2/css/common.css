@@ -1,0 +1,190 @@
+/* global */
+@font-face {
+	font-family: NanumSquare;
+	src: url(../font/NanumSquareL.ttf) format('truetype');
+	font-weight: 300;
+}
+@font-face {
+	font-family: NanumSquare;
+	src: url(../font/NanumSquareR.ttf) format('truetype');
+	font-weight: 400;
+}
+@font-face {
+	font-family: NanumSquare;
+	src: url(../font/NanumSquareB.ttf) format('truetype');
+	font-weight: 600;
+}
+@font-face {
+	font-family: NanumSquare;
+	src: url(../font/NanumSquareEB.ttf) format('truetype');
+	font-weight: 700;
+}
+
+* { margin: 0; padding: 0; }
+body { font-family: NanumSquare, fontello; }
+ul,li { list-style: none; }
+::selection { background: #aaf; color: #afa; }
+input[type='radio'],
+input[type='checkbox'] { display: none }
+label { display: block }
+
+/* header */
+
+header { position: relative; width: 100%; height: 550px; }
+header .slide { position: absolute; width: 100%; height: 100%; }
+header .slide div { position: absolute; width: 100%; height: 100%; }
+header .wrap { margin: 0 auto; z-index: 10; width: 90%; height: 550px; position: relative; }
+header .nav { position: relative; color: #fff; width: 100%; height: 53px; }
+header .nav .block { margin: 0 auto; width: 90%; display: flex; justify-content: space-between; line-height: 50px; }
+header .nav .logo { font-size: 30px; }
+header .nav .gnb { width: 350px; justify-content: space-between; display: flex; }
+header .nav .gnb li { font-size: 20px; }
+header .nav .bar { position: absolute; bottom: 0; background: #fff; display: flex; justify-content: center; width: 100%; height: 3px; }
+header .nav .bar_animation { height: 3px; animation: bar 2s; background: #2ed1f0; animation-fill-mode: forwards; }
+header .main { position: relative; z-index: 10; height: calc(100% - 53px) }
+header .main .block { color: #fff; position: absolute; left: 50px; top: 20%; }
+header .main .block .text { line-height: 120%; font-size: 25px; width: 450px; height: 140px; }
+header .main .block .more { transition: .3s; position: absolute; right: 10px; bottom: 0; background: #fff; color: #000; width: 120px; height: 35px; font-size: 17.5px; text-align: center; line-height: 35px; border-radius: 3px; }
+header .main .block .more:hover { background: #2ed1f0; color: #fff; }
+header .pos1 { animation: bgfade1 15s infinite; background: url(../image/img3.jpg) no-repeat center/cover; }
+header .pos2 { animation: bgfade2 15s infinite; background: url(../image/sky.jpg) no-repeat center/cover; }
+header .pos3 { animation: bgfade3 15s infinite; background: url(../image/mountain.jpg) no-repeat center/cover; }
+
+@keyframes bgfade1 {
+	100%, 0%, 30% { opacity: 1; }
+	33%, 63% { opacity: 0; }
+	66%, 96% { opacity: 0; }
+}
+@keyframes bgfade2 {
+	100%, 0%, 30% { opacity: 0; }
+	33%, 63% { opacity: 1; }
+	66%, 96% { opacity: 0; }
+}
+@keyframes bgfade3 {
+	100%, 0%, 30% { opacity: 0; }
+	33%, 63% { opacity: 0; }
+	66%, 96% { opacity: 1; }
+}
+@keyframes bar {
+	0% { width: 0% }
+	100% { width: 100% }
+}
+
+.intro { height: 985px; width: 100%; display: flex; flex-flow: column wrap; justify-content: space-around; align-items: center; }
+.intro .title { font-size: 30px; }
+.intro .title span { font-weight: 600; }
+.intro .content { display: flex; flex-flow: column wrap; justify-content: space-between; align-items: center; width: 1000px; height: 615px; }
+.intro .content > .bar { display: flex; justify-content: space-around; width: 705px; height: 1px; background: #dbdbdb; }
+.intro .content .marker { position: relative; width: 80px; height: 35px;  transform: translateY(-8px); display: flex; justify-content: center; }
+.intro .content .marker .text { font-size: 13px; color: #b6b6b6; position: absolute; bottom: 0; }
+.intro .content .marker .mark { overflow: hidden; width: 18px; height: 24px; color: #dbdbdb; }
+.intro .content .marker .mark > div:first-child { transition: .4s; margin-top: -13px; transform: scale(1.2,1); }
+.intro .content .marker .mark > div:last-child { margin-top: 1.5px; }
+.intro .content .marker .mark > div { line-height: 14px; }
+.intro .content .cont_box { box-shadow: 1px 1px 5px 0 #666; position: relative; display: flex; width: 1000px; height: 500px; }
+.intro .content .cont_box .left { transition: .5s; display: flex; justify-content: center; align-items: center; position: absolute; background: linear-gradient(to bottom, #12bced, #018ed6); width: 220px; height: 500px; }
+.intro .content .cont_box .left .wrap { display: flex; flex-flow: column wrap; justify-content: space-around; width: 90%; height: 90%; }
+.intro .content .cont_box .left .bar { background: #fff; width: 100%; height: 3px; }
+.intro .content .cont_box .left .short_bar { background: #1c6ff1; width: 40%; height: 3px; }
+.intro .content .cont_box .left .circle { font-size: 30px; color: #fff; background: #444; width: 67px; height: 67px; font-style: normal; border-radius: 50%; text-align: center; line-height: 67px; }
+.intro .content .cont_box .left .title { font-size: 30px; color: #fff; }
+.intro .content .cont_box .left .more { position: absolute; left: calc(50% - 58.5px); bottom: 40px; background: #444; width: 117px; height: 38px; color: #fff; border-radius: 19px; text-align: center; line-height: 38px; }
+.intro .content .cont_box .left .fakebox { width: 117px; height: 38px; }
+.intro .content .cont_box .left .desc { color: #fff; }
+.intro .content .cont_box .right { margin-left: 220px; width: 780px; height: 500px; }
+.intro .content .cont_box .right .image { width: 780px; height: 350px; }
+.intro .content .cont_box .right .desc { display: flex; justify-content: center; align-items: center; width: 780px; height: 150px; }
+.intro .content .cont_box .right .desc div { width: 90%; }
+
+.intro #pos1:checked ~ .bar .marker:nth-child(1) .mark > div:first-child { margin-top: 7px; }
+.intro #pos2:checked ~ .bar .marker:nth-child(2) .mark > div:first-child { margin-top: 7px; }
+.intro #pos3:checked ~ .bar .marker:nth-child(3) .mark > div:first-child { margin-top: 7px; }
+.intro #pos4:checked ~ .bar .marker:nth-child(4) .mark > div:first-child { margin-top: 7px; }
+.intro #pos1:checked ~ .cont_box .left .circle:before { content: "\e800"; }
+.intro #pos2:checked ~ .cont_box .left .circle:before { content: "\e801"; }
+.intro #pos3:checked ~ .cont_box .left .circle:before { content: "\f290"; }
+.intro #pos4:checked ~ .cont_box .left .circle:before { content: "\f0f5"; }
+.intro #pos1:checked ~ .cont_box .left .title:before { content: "Landmark"; }
+.intro #pos2:checked ~ .cont_box .left .title:before { content: "Nature / Park"; }
+.intro #pos3:checked ~ .cont_box .left .title:before { content: "Shopping"; }
+.intro #pos4:checked ~ .cont_box .left .title:before { content: "Food"; }
+.intro #pos1:checked ~ .cont_box .left .desc p:first-child:before { content: "[Landmark] Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"; }
+.intro #pos2:checked ~ .cont_box .left .desc p:first-child:before { content: "[Nature / Park] Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"; }
+.intro #pos3:checked ~ .cont_box .left .desc p:first-child:before { content: "[Shopping] Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"; }
+.intro #pos4:checked ~ .cont_box .left .desc p:first-child:before { content: "[Food] Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"; }
+.intro #pos1:checked ~ #more:checked ~ .cont_box .left { width: 385px; }
+.intro #pos2:checked ~ #more:checked ~ .cont_box .left { width: 385px; }
+.intro #pos3:checked ~ #more:checked ~ .cont_box .left { width: 385px; }
+.intro #pos4:checked ~ #more:checked ~ .cont_box .left { width: 385px; }
+.intro #pos1:checked ~ #more:checked ~ .cont_box .left .desc p:last-child:before { content: " quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse"; }
+.intro #pos2:checked ~ #more:checked ~ .cont_box .left .desc p:last-child:before { content: " quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse"; }
+.intro #pos3:checked ~ #more:checked ~ .cont_box .left .desc p:last-child:before { content: " quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse"; }
+.intro #pos4:checked ~ #more:checked ~ .cont_box .left .desc p:last-child:before { content: " quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse"; }
+.intro #pos1:checked ~ .cont_box .right .image { background: url(../image/img1.jpg)no-repeat center/cover; }
+.intro #pos2:checked ~ .cont_box .right .image { background: url(../image/img3.jpg)no-repeat center/cover; }
+.intro #pos3:checked ~ .cont_box .right .image { background: url(../image/shopping.jpg)no-repeat center/cover; }
+.intro #pos4:checked ~ .cont_box .right .image { background: url(../image/food.jpg)no-repeat center/cover; }
+.intro #pos1:checked ~ .cont_box .right .desc .text:before { content: "[Landmark] Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."; }
+.intro #pos2:checked ~ .cont_box .right .desc .text:before { content: "[Nature / Park] Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."; }
+.intro #pos3:checked ~ .cont_box .right .desc .text:before { content: "[Shopping] Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."; }
+.intro #pos4:checked ~ .cont_box .right .desc .text:before { content: "[Food] Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."; }
+
+/* info */
+.info { position: relative; height: 330px; width: 100%; background: url(../image/img2.jpg) no-repeat 50% 75%/cover; }
+.info:before { content: ""; position: absolute; display: block; left: 0; right: 0; top: 0; bottom: 0; background: rgba(52,62,87,0.7); }
+.info .wrap { position: absolute; display: flex; justify-content: space-around; align-items: center; left: 50%; transform: translateX(-50%); width: 80%; height: 100%; }
+.info .circle_box { display: flex; flex-flow: column wrap; justify-content: space-around; align-items: center; width: 78px; height: 160px; }
+.info .circle_box .circle {opacity: 0; animation: circle 1s; animation-fill-mode: forwards; overflow: hidden; width: 78px; height: 78px; background: #5e718f; color: #fff; border-radius: 50%; text-align: center; line-height: 78px; font-size: 40px; }
+.info .circle_box:hover .circle { opacity: 1; animation: bounce 1s; }
+.info .circle_box:nth-child(1) .circle { animation-delay: 0s; }
+.info .circle_box:nth-child(2) .circle { animation-delay: 0.5s; }
+.info .circle_box:nth-child(3) .circle { animation-delay: 1s; }
+.info .circle_box:nth-child(4) .circle { animation-delay: 1.5s; }
+.info .circle_box .bg { animation: wave 1s; animation-fill-mode: forwards; width: 78px; height: 78px; background: url(../image/water.png)no-repeat center/cover; }
+.info .circle_box:nth-child(1) .bg { animation-delay: 0s; }
+.info .circle_box:nth-child(2) .bg { animation-delay: 0.5s; }
+.info .circle_box:nth-child(3) .bg { animation-delay: 1s; }
+.info .circle_box:nth-child(4) .bg { animation-delay: 1.5s; }
+.info .circle_box .circle div:not(.bg) { position: relative; z-index: 20 }
+.info .circle_box p { text-align: center; color: #fff; }
+.info .circle_box p:first-of-type { font-size: 30px; font-weight: 700; }
+
+@keyframes circle {
+	0% { opacity: 0; transform: translateY(-30px); }
+	100% { opacity: 1; transform: translateY(0px); }	
+}
+
+@keyframes wave {
+	0% { transform: translateY(30px); }
+	100% { transform: translateY(-40px); }
+}
+
+@keyframes bounce {
+	0% { transform: scale(1); }
+	33.33% { transform: scale(1.1); }
+	39.33% { transform: scale(1.1); }
+	63.66% { transform: scale(0.6); }
+	69.66% { transform: scale(0.6); }
+	100% { transform: scale(1); }
+}
+
+.slide { position: relative; width: 100%; height: 300px; }
+.slide .img_cover { display: flex; }
+.slide .img_cover .slide_img { width: 33.33%; height: 300px; }
+.slide .img_cover .slide_img:nth-child(1) { background: url(../image/img1.jpg)no-repeat center/cover; }
+.slide .img_cover .slide_img:nth-child(2) { background: url(../image/img2.jpg)no-repeat center/cover; }
+.slide .img_cover .slide_img:nth-child(3) { background: url(../image/img3.jpg)no-repeat center/cover; }
+.slide .slide_cover { animation: slide 12s infinite; transform: translateX(0); display: flex; justify-content: space-between; position: absolute; width: 268.5%; height: 100%; }
+.slide .slide_cover:hover { animation-play-state: paused; }
+.slide .slide_cover .slide_block { width: 24.9%; height: 100%; background: rgba(255,255,255,0.5); }
+
+@keyframes slide {
+	0%, 
+	14.1% { transform: translateX(-415px); }
+	19.2%,
+	47.4% { transform: translateX(-825px); }
+	52.5%,
+	80.7% { transform: translateX(-1235px); }
+	85.8%,
+	100% { transform: translateX(-1650px); }
+}

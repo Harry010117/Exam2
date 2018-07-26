@@ -3,131 +3,157 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="./css/common.css">
+	<link rel="stylesheet" type="text/css" href="./fontello/css/fontello.css">
 </head>
 <body>
 	<header>
-		<div class="nav">
-			<ul class="gnb">
-				<li>Home</li>
-				<li>About</li>
-				<li>Product</li>
-				<li>Contact</li>
-			</ul>
+		<div class="slide">
+			<div class="pos1"></div>
+			<div class="pos2"></div>
+			<div class="pos3"></div>
 		</div>
-		<div class="main">
-			<div class="slide">
-				<div class="pos1"></div>
-				<div class="pos2"></div>
-				<div class="pos3"></div>
-				<div class="pos4"></div>
-			</div>
 			<div class="wrap">
-				<div class="text">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt
+				<div class="nav">
+					<div class="block">
+						<div class="logo">
+							<p>Logo</p>
+						</div>
+						<ul class="gnb">
+							<li>Home</li>
+							<li>About</li>
+							<li>Product</li>
+							<li>Contact</li>
+						</ul>
+					</div>
+					<div class="bar">
+						<div class="bar_animation"></div>
+					</div>
 				</div>
-				<div class="more">Learn more</div>
+				<div class="main">
+					<div class="block">
+						<div class="text">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, <br> sed do eiusmod
+							tempor incididunt
+						</div>
+						<div class="more">Learn more</div>
+					</div>
+				</div>
 			</div>
-		</div>
 	</header>
 	<section class="intro">
-		<p>Welcome to <span>Yeosu!</span></p>
-		<div></div>
+		<p class="title">Welcome to <span>Yeosu!</span></p>
 		<div class="content">
-			<input type="radio" name="pos" id="pos1">
+			<input type="radio" name="pos" id="pos1" checked>
 			<input type="radio" name="pos" id="pos2">
 			<input type="radio" name="pos" id="pos3">
 			<input type="radio" name="pos" id="pos4">
 			<input type="checkbox" name="more" id="more">
 			<div class="bar">
-				<div class="marker">
-					<div>
+				<label for="pos1" class="marker">
+					<div class="mark">
 						<div>▼</div>
 						<div>●</div>
 					</div>
-					<label for="pos1"></label>
-				</div>
-				<div class="marker">
-					<div>
+					<div class="text">Landmark</div>
+				</label>
+				<label for="pos2" class="marker">
+					<div class="mark">
 						<div>▼</div>
 						<div>●</div>
 					</div>
-					<label for="pos2"></label>
-				</div>
-				<div class="marker">
-					<div>
+					<div class="text">Nature / Park</div>
+				</label>
+				<label for="pos3" class="marker">
+					<div class="mark">
 						<div>▼</div>
 						<div>●</div>
 					</div>
-					<label for="pos3"></label>
-				</div>
-				<div class="marker">
-					<div>
+					<div class="text">Shopping</div>
+				</label>
+				<label for="pos4" class="marker">
+					<div class="mark">
 						<div>▼</div>
 						<div>●</div>
 					</div>
-					<label for="pos4"></label>
-				</div>
+					<div class="text">Food</div>
+				</label>
 			</div>
 			<div class="cont_box">
 				<div class="left">
-					<div></div>
-					<p></p>
-					<div class="bar">
-						<div class="short_bar"></div>
+					<div class="wrap">
+						<div class="circle">
+						</div>
+						<p class="title"></p>
+						<div class="bar">
+							<div class="short_bar"></div>
+						</div>
+						<div class="desc">
+							<p></p>
+							<p></p>
+						</div>
+						<div class="fakebox"></div>
+						<label for="more" class="more">Leran more</label>
 					</div>
-					<p></p>
-					<label for="more">Leran more</label>
 				</div>
 				<div class="right">
 					<div class="image"></div>
 					<div class="desc">
-						<p class="text">[Landmark] Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur.</p>
+						<div>
+							<p class="text"></p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<section class="info">
-		<div class="circle_box">
-			<div class="circle">
-
-				<div class="bg"></div>
+		<div class="wrap">
+			<div class="circle_box">
+				<div class="circle">
+					<div class="icon-heart"></div>
+					<div class="bg"></div>
+				</div>
+				<p>716</p>
+				<p>Likes</p>
 			</div>
-			<p>716</p>
-			<p>Likes</p>
-		</div>
-		<div class="circle_box">
-			<div class="circle">
-
-				<div class="bg"></div>
+			<div class="circle_box">
+				<div class="circle">
+					<div class="icon-user-plus"></div>
+					<div class="bg"></div>
+				</div>
+				<p>1K+</p>
+				<p>Joins</p>
 			</div>
-			<p>1K+</p>
-			<p>Joins</p>
-		</div>
-		<div class="circle_box">
-			<div class="circle">
-
-				<div class="bg"></div>
+			<div class="circle_box">
+				<div class="circle">
+					<div class="icon-login"></div>
+					<div class="bg"></div>
+				</div>
+				<p>62</p>
+				<p>Today</p>
 			</div>
-			<p>62</p>
-			<p>Today</p>
-		</div>
-		<div class="circle_box">
-			<div class="circle">
-
-				<div class="bg"></div>
+			<div class="circle_box">
+				<div class="circle">
+					<div class="icon-share"></div>
+					<div class="bg"></div>
+				</div>
+				<p>820</p>
+				<p>Shares</p>
 			</div>
-			<p>820</p>
-			<p>Shares</p>
 		</div>
 	</section>
 	<section class="slide">
-		
+		<div class="slide_cover">
+			<div  class="slide_block"></div>
+			<div  class="slide_block"></div>
+			<div  class="slide_block"></div>
+		</div>
+		<div class="img_cover">
+			<div class="slide_img"></div>
+			<div class="slide_img"></div>
+			<div class="slide_img"></div>
+		</div>
 	</section>
 	<section class="contact">
 		<p></p>
@@ -148,6 +174,39 @@
 			</div>
 		</div>
 	</section>
-	<footer></footer>
+	<footer>
+		<div class="about">
+			<p class="title">About Us</p>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in <br> reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur.
+			</p>
+			<p>Address:010-1234-5678</p>
+			<p>Fax:(02) 1234-5678</p>
+			<p>Email:webSkills@gmail.com</p>
+		</div>
+		<div>
+			<p class="title">Gallery</p>
+			<div class="image_box">
+				<div class="img"></div>
+				<div class="img"></div>
+				<div class="img"></div>
+				<div class="img"></div>
+				<div class="img"></div>
+				<div class="img"></div>
+			</div>
+		</div>
+		<div class="social">
+			<div class="wrap">
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+			</div>
+		</div>
+		<div>Copyright &copy; 2018 Webskills</div>
+	</footer>
 </body>
 </html>
