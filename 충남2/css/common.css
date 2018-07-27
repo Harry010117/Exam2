@@ -175,30 +175,47 @@ header .pos3 { animation: bgfade3 15s infinite; background: url(../image/mountai
 
 .slide { overflow: hidden; position: relative; width: 100%; height: 300px; }
 .slide .img_cover { display: flex; }
-.slide .img_cover .slide_img { width: 33.33%; height: 300px; }
-.slide .img_cover .slide_img:nth-child(1) { background: url(../image/img1.jpg)no-repeat center/cover; }
-.slide .img_cover .slide_img:nth-child(2) { background: url(../image/img2.jpg)no-repeat center/cover; }
-.slide .img_cover .slide_img:nth-child(3) { background: url(../image/img3.jpg)no-repeat center/cover; }
-.slide .slide_cover { animation: slide 12s infinite; transform: translateX(0); display: flex; justify-content: space-between; position: absolute; width: 268.5%; height: 100%; }
+.slide .slide_cover .wid100 { display: flex; width: 22.22%; margin-right: 11.11%; }
+.slide .img_cover .slide_img { position: relative; display: block; width: 33.33%; height: 300px; }
+.slide .img_cover .slide_img:hover { background: #fff; }
+.slide .img_cover .slide_img:nth-child(1) { animation: zindex3 12s infinite; background: url(../image/img1.jpg)no-repeat center/cover; }
+.slide .img_cover .slide_img:nth-child(2) { animation: zindex2 12s infinite; background: url(../image/img2.jpg)no-repeat center/cover; }
+.slide .img_cover .slide_img:nth-child(3) { animation: zindex1 12s infinite; background: url(../image/img3.jpg)no-repeat center/cover; }
+.slide .slide_cover { z-index: 1; animation: slide 12s infinite; transform: translateX(0); display: flex; justify-content: space-between; width: 300%; position: absolute; height: 100%; }
 .slide .slide_cover:hover { animation-play-state: paused; }
-.slide .slide_cover .slide_block { width: 24.9%; height: 100%; background: rgba(255,255,255,0.5); }
+.slide .slide_cover .slide_block { width: 100%; height: 100%; background: rgba(255,255,255,0.5); }
 
 @keyframes slide {
-	0%, 
-	14.1% { transform: translateX(-12.6%); }
-	19.2%,
-	47.4% { transform: translateX(-25.15%); }
-	52.5%,
-	80.7% { transform: translateX(-37.7%); }
-	85.8%,
-	100% { transform: translateX(-50.1%); }
+	0%, 30% { transform: translateX(0%); }
+	33.33%, 63.33% { transform: translateX(-11.1%); }
+	66.66%, 96.66% { transform: translateX(-22.2%); }
+	100% { transform: translateX(-33.3%); }
 }
-
+@keyframes zindex1 {
+	0%, 30% { z-index: 1 }
+	33.33%, 63.33% { z-index: 0 }
+	66.66%, 96.66% { z-index: 0 }
+	100% { z-index: 1 }
+}
+@keyframes zindex2 {
+	0%, 30% { z-index: 0 }
+	33.33%, 63.33% { z-index: 1 }
+	66.66%, 96.66% { z-index: 0 }
+	100% { z-index: 0 }
+}
+@keyframes zindex3 {
+	0%, 30% { z-index: 0 }
+	33.33%, 63.33% { z-index: 0 }
+	66.66%, 96.66% { z-index: 1 }
+	100% { z-index: 0 }
+}
 /* contact */
 
 .contact { display: flex; justify-content: center; align-items: center; height: 635px; width: 100%; }
-.contact > div > p:active ~ .form input,
-.contact > div > p:active ~ .textarea textarea, { animation: shake 1s; animation-iteration-count: 3; }
+.contact > div > p:hover ~ .form input,
+.contact > div > p:hover ~ .textarea textarea { animation: shake .1s; animation-iteration-count: 3; -webkit-animation-direction: alternate;
+-o-animation-direction: alternate;
+animation-direction: alternate; }
 .contact div { display: flex; flex-flow: column wrap; justify-content: space-around; align-items: center; }
 .contact > div { justify-content: space-between; height: 430px; }
 .contact > div > p { font-size: 30px; font-weight: 600; }
@@ -217,8 +234,8 @@ header .pos3 { animation: bgfade3 15s infinite; background: url(../image/mountai
 .contact textarea { padding: 10px; color: #8a8a8a; width: 910px; height: 170px; resize: none; }
 
 @keyframes shake {
- from { transform: rotate(10deg); }
- to { transform-origin:center center; transform: rotate(-10deg); }
+	from { transform: rotate(10deg); }
+	to { transform-origin:center center; transform: rotate(-10deg); }
 }
 /* footer */
 footer { height: 345px; }
