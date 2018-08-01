@@ -11,13 +11,14 @@ label { display: block; }
 header { height: 107px; }
 header .top { background: #242424; }
 header .top > div { margin: 0 auto; width: 1200px; display: flex; justify-content: space-between; height: 47px; line-height: 47px; }
-header .top .logo { color: #57c584; font-size: 30px; }
+header .top .logo { color: #57c5a0; font-size: 30px; }
 header .top .right { display: flex; color: #7e7e7e; }
 header .top .right div { padding: 0 30px; border-right: 1px solid #7e7e7e; }
 header .nav { background: #fff; }
 header .nav > div { margin: 0 auto; width: 1200px; display: flex; justify-content: space-between; }
 header .nav .gnb { display: flex; align-items: center; width: 650px; }
-header .nav .gnb li { border-left: 1px solid #ccc; height: 60px; line-height: 60px; text-align: center; color: #242424; padding: 0 15px; font-size: 20px; font-weight: lighter; }
+header .nav .gnb li { transition: .5s; border-left: 1px solid #ccc; height: 60px; line-height: 60px; text-align: center; color: #242424; padding: 0 15px; font-size: 20px; font-weight: lighter; }
+header .nav .gnb li:hover { background: #57c5a0; color: #6e6e6e; }
 header .nav .gnb li:last-child { width: 1px; padding: 0; }
 header .nav .shopping { display: flex; }
 header .nav .shopping .bar { width: 1px; height: 100%; background: #ccc; }
@@ -31,42 +32,58 @@ header .nav .count { width: 25px; height: 25px; color: #fff; border-radius: 5px;
 /* MAIN */
 .main { height: 980px; }
 .main .slide { width: 100%; height: 700px; }
-.main .slide .slide_box { display: flex; }
-.main .slide .img_pieces { position: relative; width: 20%; height: 600px; }
-.main .slide .img_pieces div { overflow: hidden; position: absolute; width: 100%; height: 600px; }
-.main .slide .img_pieces div div { position: absolute; width: 500%; height: 600px; }
+.main .slide .slide_box { display: flex; overflow: hidden; }
+.main .slide .img_pieces { transition: .5s; position: relative; width: 20%; height: 600px; }
+.main .slide .img_pieces .piece { transition: .5s; overflow: hidden; position: absolute; width: 100%; height: 600px; }
+.main .slide .img_pieces .piece div { position: absolute; width: 500%; height: 600px; }
 .main .slide .img_pieces .piece1 div { background: url(../images/slide1.png) no-repeat center/cover; }
 .main .slide .img_pieces .piece2 div { background: url(../images/slide2.png) no-repeat center/cover; }
 .main .slide .img_pieces .piece3 div { background: url(../images/slide3.png) no-repeat center/cover; }
 .main .slide .img_pieces .piece4 div { background: url(../images/slide4.png) no-repeat center/cover; }
 .main .slide .img_pieces .piece5 div { background: url(../images/slide5.png) no-repeat center/cover; }
-.main .slide .img_pieces:nth-child(1) div div { left: 0% }
-.main .slide .img_pieces:nth-child(2) div div { left: -100% }
-.main .slide .img_pieces:nth-child(3) div div { left: -200% }
-.main .slide .img_pieces:nth-child(4) div div { left: -300% }
-.main .slide .img_pieces:nth-child(5) div div { left: -400% }
-#pos1:checked ~ .slide_box .img_pieces:nth-child(1) .piece:not(:nth-child(1)) {  }
-#pos2:checked ~ .slide_box .img_pieces:nth-child(2) .piece:not(:nth-child(2)) {  }
-#pos3:checked ~ .slide_box .img_pieces:nth-child(3) .piece:not(:nth-child(3)) {  }
-#pos4:checked ~ .slide_box .img_pieces:nth-child(4) .piece:not(:nth-child(4)) {  }
-#pos5:checked ~ .slide_box .img_pieces:nth-child(5) .piece:not(:nth-child(5)) {  }
-.main .slide .control_wrap { display: flex; height: 100px; justify-content: space-around; align-items: center; flex-flow: column wrap; background: #2e2e2e; }
-.main .slide .control_wrap .slide_bar { display: flex; align-items: center; background: #000; width: 1200px; height: 10px; margin-top: 10px; }
-.main .slide .control_wrap .slide_bar .position {margin: 0 0.625%; background: #57c5a0; width: 18.25%; height: 5px; }
+.main .slide .img_pieces:nth-child(1) .piece { transform: translateY(100%); }
+.main .slide .img_pieces:nth-child(2) .piece { transform: translateY(-100%); }
+.main .slide .img_pieces:nth-child(3) .piece { transform: translateY(100%); }
+.main .slide .img_pieces:nth-child(4) .piece { transform: translateY(-100%); }
+.main .slide .img_pieces:nth-child(5) .piece { transform: translateY(100%); }
+.main .slide .img_pieces:nth-child(1) .piece div { left: 0% }
+.main .slide .img_pieces:nth-child(2) .piece div { left: -100% }
+.main .slide .img_pieces:nth-child(3) .piece div { left: -200% }
+.main .slide .img_pieces:nth-child(4) .piece div { left: -300% }
+.main .slide .img_pieces:nth-child(5) .piece div { left: -400% }
+#pos1:checked ~ .slide_box .img_pieces:nth-child(odd) .piece:nth-child(1) { transform: translateY(0%); }
+#pos2:checked ~ .slide_box .img_pieces:nth-child(odd) .piece:nth-child(2) { transform: translateY(0%); }
+#pos3:checked ~ .slide_box .img_pieces:nth-child(odd) .piece:nth-child(3) { transform: translateY(0%); }
+#pos4:checked ~ .slide_box .img_pieces:nth-child(odd) .piece:nth-child(4) { transform: translateY(0%); }
+#pos5:checked ~ .slide_box .img_pieces:nth-child(odd) .piece:nth-child(5) { transform: translateY(0%); }
+#pos1:checked ~ .slide_box .img_pieces:nth-child(even) .piece:nth-child(1) { transform: translateY(0%); }
+#pos2:checked ~ .slide_box .img_pieces:nth-child(even) .piece:nth-child(2) { transform: translateY(0%); }
+#pos3:checked ~ .slide_box .img_pieces:nth-child(even) .piece:nth-child(3) { transform: translateY(0%); }
+#pos4:checked ~ .slide_box .img_pieces:nth-child(even) .piece:nth-child(4) { transform: translateY(0%); }
+#pos5:checked ~ .slide_box .img_pieces:nth-child(even) .piece:nth-child(5) { transform: translateY(0%); }
+#pos1:checked ~ .control_wrap .position { left: 0%; }
+#pos2:checked ~ .control_wrap .position { left: 20%; }
+#pos3:checked ~ .control_wrap .position { left: 40%; }
+#pos4:checked ~ .control_wrap .position { left: 60%; }
+#pos5:checked ~ .control_wrap .position { left: 80%; }
+.main .slide .control_wrap { z-index: 100; position: relative; display: flex; height: 100px; justify-content: space-around; align-items: center; flex-flow: column wrap; background: #2e2e2e; }
+.main .slide .control_wrap .slide_bar { position: relative; display: flex; align-items: center; background: #000; width: 1200px; height: 10px; margin-top: 10px; }
+.main .slide .control_wrap .slide_bar .position { transition: .3s; position: absolute; background: #57c5a0; width: 20%; height: 5px; }
 .main .slide .control { display: flex; width: 1200px; background: #2e2e2e ; color: #fff; height: 50px; }
-.main .slide .control label { text-align: center; width: 20%; height: 50px; line-height: 50px; }
+.main .slide .control label { transition: .3s; color: #979797; text-align: center; width: 20%; height: 50px; line-height: 50px; }
+.main .slide .control label:hover { color: #fff; }
 
 .recommend { width: 100%; height: 280px; background: #242424; }
 .recommend .wrap { margin: 0 auto; width: 1200px; height: 220px; display: flex; justify-content: space-around; align-items: center; }
 .recommend .wrap .block { overflow: hidden; display: flex; justify-content: center; align-items: center; position: relative; width: 380px; height: 220px; }
-.recommend .wrap .block .bg { transition: transform .4s linear; position: absolute; width: 380px; height: 220px; }
+.recommend .wrap .block .bg { transition: transform .5s linear; position: absolute; width: 380px; height: 220px; }
 .recommend .wrap .block:hover .bg { transition: transform .4s linear 1s; transform: scale(1.1); }
 .recommend .wrap .block:nth-child(1) .bg { background: url(../images/banner1.png); }
 .recommend .wrap .block:nth-child(2) .bg { background: url(../images/banner2.png); }
 .recommend .wrap .block:nth-child(3) .bg { background: url(../images/banner3.png); }
-.recommend .wrap .block .animate_block { transition: width 1s ease, height 1s ease; width: 70%; height: 30%; transform: rotateZ(0deg); background: rgba(0,0,0,0.5); position: absolute; }
+.recommend .wrap .block .animate_block { transition: width .5s ease, height .5s ease; width: 70%; height: 30%; transform: rotateZ(0deg); background: rgba(0,0,0,0.5); position: absolute; }
 .recommend .wrap .block:hover .animate_block { transition: transform 1s ease, width 1s ease, height .4s ease 1s; transform: rotateZ(630deg); height: 175%; width: 100%; }
-.recommend .wrap .block .text { transition: color .2s linear; font-size: 30px; position: absolute; color: #fff; width: 100%; height: 100%; line-height: 220px; text-align: center; }
+.recommend .wrap .block .text { transition: color .2s linear; font-size: 25px; position: absolute; color: #fff; width: 100%; height: 100%; line-height: 220px; text-align: center; }
 .recommend .wrap .block:hover .text { transition: color .2s linear 1s; color: #57c5a0; }
 
 /* CONTENT */
