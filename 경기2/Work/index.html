@@ -45,8 +45,8 @@
 								<div class="bar bottom"></div>
 							</div>
 						</div>
-						<div>로그인</div>
-						<div>회원가입</div>
+						<a href="#login_modal" class="button">로그인</a>
+						<div class="button">회원가입</div>
 					</div>
 				</div>
 				<div class="slide_box">
@@ -108,6 +108,30 @@
 					<label for="pos2" class="pos"></label>
 					<label for="pos3" class="pos"></label>
 					<label for="pos4" class="pos"></label>
+				</div>
+			</div>
+		</div>
+		<div class="modal_layer" id="login_modal">
+			<div class="modal_window">
+				<div class="wrap">
+					<div class="text_cover">
+						<p class="title">로그인</p>
+						<p class="text">The best Travel, 오늘도 함께 해요!</p>
+					</div>
+					<div class="input_cover">
+						<div class="id">
+							<input type="text" name="id" autocomplete="off" pattern="/.{0}/">
+							<div class="placeholder">아이디</div>
+						</div>
+						<div class="pw">
+							<input type="password" name="pw" autocomplete="off" pattern="/.{0}/">
+							<div class="placeholder">비밀번호</div>
+						</div>
+					</div>
+					<div class="btn_cover">
+						<a href="#close" class="cancel btn">취소</a>
+						<div class="login btn">로그인</div>
+					</div>
 				</div>
 			</div>
 		</div>
