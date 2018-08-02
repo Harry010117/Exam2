@@ -11,5 +11,5 @@
 [서울](https://github.com/Harry010117/Exam2/tree/master/서울2)  
 [인천](https://github.com/Harry010117/Exam2/tree/master/인천2)  
 [전남](https://github.com/Harry010117/Exam2/tree/master/전남2) 완료  
-[충남](https://github.com/Harry010117/Exam2/tree/master/충남2)   
+[충남](https://github.com/Harry010117/Exam2/tree/master/충남2)    
 [충북](https://github.com/Harry010117/Exam2/tree/master/충북2)    
